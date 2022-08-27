@@ -3,13 +3,7 @@ import { Layout } from "antd";
 import React from "react";
 
 const Sider = () => {
-  return <Layout.Sider css={styleSider}>
-    
-    
-    Sider
-    
-    
-    </Layout.Sider>;
+  return <Layout.Sider css={styleSider}>Sider</Layout.Sider>;
 };
 
 export default Sider;
