@@ -1,8 +1,10 @@
 {
-  "semi": true,
+  "bracketSpacing": true,
+  "jsxBracketSameLine": true,
   "trailingComma": "all",
-  "singleQuote": false,
   "printWidth": 120,
-  "tabWidth": 2,
-  "endOfLine": "auto"
+  "arrowParens": "avoid",
+  "importOrder": ["^@core/(.*)$", "^@server/(.*)$", "^@ui/(.*)$", "^[./]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
 }
