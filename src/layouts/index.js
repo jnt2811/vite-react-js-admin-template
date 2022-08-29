@@ -1,4 +1,2 @@
-import Header from "./Header";
-import Sider from "./Sider";
-
-export { Header, Sider };
+export * from "./Header";
+export * from "./Sider";
