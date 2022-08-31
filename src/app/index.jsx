@@ -36,5 +36,5 @@ const MainRoute = () => {
 export default MainRoute;
 
 const styleContent = css({
-  padding: "25px 50px",
+  padding: 20,
 });

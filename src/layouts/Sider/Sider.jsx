@@ -1,14 +1,21 @@
 import { css } from "@emotion/react";
 import { Layout, Menu } from "antd";
+import { useNavigate } from "react-router-dom";
 
 import { menuItems } from "./menuItems";
 
 const Sider = () => {
+  const navigate = useNavigate();
+
+  const handleChangeMenu = ({ key }) => {
+    navigate(key);
+  };
+
   return (
     <Layout.Sider css={styleSider}>
       <div css={styleLogo}>LOGO</div>
 
-      <Menu theme="dark" items={menuItems} />
+      <Menu theme="dark" items={menuItems} onSelect={handleChangeMenu} />
     </Layout.Sider>
   );
 };
@@ -24,9 +31,9 @@ const styleSider = css({
 });
 
 const styleLogo = css({
-  fontSize: 28,
+  fontSize: 30,
   height: 60,
   lineHeight: "60px",
   paddingLeft: 15,
-  fontWeight: "bold",
+  fontWeight: "500",
 });
