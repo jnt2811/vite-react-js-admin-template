@@ -3,7 +3,6 @@
   "jsxBracketSameLine": true,
   "trailingComma": "all",
   "printWidth": 120,
-  "arrowParens": "avoid",
   "importOrder": ["^@core/(.*)$", "^@server/(.*)$", "^@ui/(.*)$", "^[./]"],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true

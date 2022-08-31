@@ -8,6 +8,7 @@ const Sider = () => {
   const navigate = useNavigate();
 
   const handleChangeMenu = ({ key }) => {
+    console.log(key);
     navigate(key);
   };
 
@@ -25,6 +26,8 @@ export default Sider;
 const styleSider = css({
   height: "100vh",
   overflow: "auto",
+  position: "sticky",
+  top: 0,
   "*": {
     color: "#fff",
   },

@@ -31,6 +31,8 @@ const styleHeader = css({
   alignItems: "center",
   justifyContent: "space-between",
   paddingInline: 20,
+  position: "sticky",
+  top: 0,
 });
 
 const styleAvatar = css({
