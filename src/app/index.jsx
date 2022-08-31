@@ -18,7 +18,7 @@ const MainRoute = () => {
 
           <Layout.Content css={styleContent}>
             <Routes>
-              {routes.map(route => (
+              {routes.map((route) => (
                 <Route
                   key={route.path}
                   path={route.path}
