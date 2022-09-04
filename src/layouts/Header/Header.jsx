@@ -1,18 +1,22 @@
 import { LeftOutlined } from "@ant-design/icons";
 import { css } from "@emotion/react";
 import { Avatar, Button, Layout, Space, Typography } from "antd";
-import React from "react";
+import { useSelector } from "react-redux";
 
 import { UserDropdown } from "./components/UserDropdown";
 
 const Header = () => {
+  const pageReducer = useSelector((state) => state.page);
+
   return (
     <Layout.Header css={styleHeader}>
       <Space>
-        <Button icon={<LeftOutlined />} shape="circle" type="text"></Button>
+        {!!pageReducer.onBack && (
+          <Button icon={<LeftOutlined />} shape="circle" type="text" onClick={pageReducer.onBack}></Button>
+        )}
 
         <Typography.Title level={3} css={styleTitle}>
-          Title
+          {pageReducer.title}
         </Typography.Title>
       </Space>
 

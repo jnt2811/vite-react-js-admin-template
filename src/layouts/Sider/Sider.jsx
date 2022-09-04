@@ -1,14 +1,15 @@
 import { css } from "@emotion/react";
 import { Layout, Menu } from "antd";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 import { menuItems } from "./menuItems";
 
 const Sider = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleChangeMenu = ({ key }) => {
-    console.log(key);
     navigate(key);
   };
 
@@ -16,7 +17,11 @@ const Sider = () => {
     <Layout.Sider css={styleSider}>
       <div css={styleLogo}>LOGO</div>
 
-      <Menu theme="dark" items={menuItems} onSelect={handleChangeMenu} />
+      <Menu
+        theme="dark"
+        items={menuItems.map((item) => ({ ...item, label: t(item.label) }))}
+        onSelect={handleChangeMenu}
+      />
     </Layout.Sider>
   );
 };

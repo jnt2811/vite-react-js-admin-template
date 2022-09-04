@@ -1,16 +1,30 @@
 import { PlusOutlined } from "@ant-design/icons";
-import { Button, Typography } from "antd";
-import React from "react";
+import { Button } from "antd";
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import { useDispatch } from "react-redux";
+
+import { resetPage, updatePage } from "../ducks/slices/page.slice";
+import { languageKeys } from "../i18n";
 
 const Dashboard = () => {
+  const { t } = useTranslation();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(updatePage({ title: t(languageKeys.bang_dieu_khien) }));
+
+    return () => {
+      dispatch(resetPage());
+    };
+  }, [dispatch, t]);
+
   const handleClick = () => {
     console.log("click");
   };
 
   return (
     <div>
-      <Typography.Title level={3}>Dashboard</Typography.Title>
-
       <Button icon={<PlusOutlined />} type="primary" onClick={handleClick}>
         Click
       </Button>

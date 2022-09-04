@@ -1,13 +1,13 @@
 import { LoadingOutlined } from "@ant-design/icons";
 import { css } from "@emotion/react";
 import { Layout } from "antd";
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { Header, Sider } from "../layouts";
 import { routes } from "./routes";
 
-const MainRoute = () => {
+export const App = () => {
   return (
     <BrowserRouter>
       <Layout>
@@ -32,8 +32,6 @@ const MainRoute = () => {
     </BrowserRouter>
   );
 };
-
-export default MainRoute;
 
 const styleContent = css({
   padding: 20,
