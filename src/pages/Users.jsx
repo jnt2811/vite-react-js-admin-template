@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 
 import { resetPage, updatePage } from "../ducks/slices/page.slice";
+import { UserList } from "../features";
 import { languageKeys } from "../i18n";
 
 const Users = () => {
@@ -17,7 +18,11 @@ const Users = () => {
     };
   }, [dispatch, t]);
 
-  return <div style={{ height: "200vh" }}>Users</div>;
+  return (
+    <div>
+      <UserList />
+    </div>
+  );
 };
 
 export default Users;
