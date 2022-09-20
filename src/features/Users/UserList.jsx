@@ -3,12 +3,11 @@ import { Avatar, Table } from "antd";
 import moment from "moment";
 import { useMemo } from "react";
 
-import { apis } from "../../constants";
-import { mainApi } from "../../libs/apiInstances";
+import { apiGetUserList } from "../../services/apis";
 
 export const UserList = () => {
   const { data, isLoading, isError, error } = useQuery(["user-list"], () => {
-    return mainApi.get(apis.GET_ALL_USERS);
+    return apiGetUserList();
   });
 
   const dataSource = useMemo(() => {

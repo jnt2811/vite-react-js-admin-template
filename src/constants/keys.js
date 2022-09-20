@@ -1,1 +1,4 @@
-export const keys = {};
+export const keys = {
+  ACCESS_TOKEN: "ACCESS_TOKEN",
+  REFRESH_TOKEN: "REFRESH_TOKEN",
+};
